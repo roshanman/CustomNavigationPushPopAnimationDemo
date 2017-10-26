@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wDc-mP-Grw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomPushPopDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="1" id="X9q-zr-qMy">
+                        <barButtonItem key="rightBarButtonItem" title="Push" id="Ie6-yG-uBe">
+                            <connections>
+                                <segue destination="mrR-uZ-JQE" kind="show" id="Pae-kv-kiN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="777"/>
+        </scene>
+        <!--2-->
+        <scene sceneID="uOC-Jz-sc7">
+            <objects>
+                <viewController id="mrR-uZ-JQE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8lm-qm-UbK"/>
+                        <viewControllerLayoutGuide type="bottom" id="lB2-P7-Y1f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q0l-Im-S5w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLD-3e-cUQ">
+                                <rect key="frame" x="126.5" y="315.5" width="122.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tLD-3e-cUQ" firstAttribute="centerX" secondItem="q0l-Im-S5w" secondAttribute="centerX" id="2kB-ik-RX3"/>
+                            <constraint firstItem="tLD-3e-cUQ" firstAttribute="centerY" secondItem="q0l-Im-S5w" secondAttribute="centerY" id="VgD-Sn-Psf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="2" id="JmF-fp-Wwx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8B-4J-uir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="777"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vg0-p5-akx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wDc-mP-Grw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ev-Ei-KJo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <outlet property="delegate" destination="3dR-04-M7s" id="NWd-y7-Jex"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rku-eS-KDQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWF-Fm-f0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3dR-04-M7s" customClass="NavigationControllerDelegate" customModule="CustomPushPopDemo" customModuleProvider="target">
+                    <connections>
+                        <outlet property="navigationController" destination="wDc-mP-Grw" id="IH6-7a-xVQ"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="776.76161919040487"/>
+        </scene>
+    </scenes>
+</document>
