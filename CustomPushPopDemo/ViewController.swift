@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let delegate = NavigationControllerDelegate()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
